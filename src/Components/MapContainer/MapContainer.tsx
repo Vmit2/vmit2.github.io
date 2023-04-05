@@ -1,4 +1,8 @@
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  useLoadScript
+} from "@react-google-maps/api";
 import { useEffect, useRef, useState } from "react";
 
 enum LibraryName {
@@ -75,12 +79,12 @@ function MapContainer(props: Props) {
   };
 
   const localCordinates = localStorage.getItem("CurrentLocation");
-  const currentLocation = center ||
-    (localCordinates && JSON.parse(localCordinates)) 
-    // || {
-    //   lat: 37.7749,
-    //   lng: -122.4194,
-    // };
+  const currentLocation =
+    center || (localCordinates && JSON.parse(localCordinates));
+  // || {
+  //   lat: 37.7749,
+  //   lng: -122.4194,
+  // };
 
   return (
     <>
